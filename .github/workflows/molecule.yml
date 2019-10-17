@@ -11,7 +11,6 @@ jobs:
           path: kubectl
       - name: Check out dependencies
         run: >
-          git clone https://github.com/ThreeFx/ansible-homedir ../homedir &&
           git clone https://github.com/ThreeFx/ansible-zsh ../zsh &&
           git clone https://github.com/ThreeFx/ansible-update-packages ../update-packages
       - name: Install python-virtualenv

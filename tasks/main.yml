@@ -1,0 +1,16 @@
+---
+- name: Install kubectl
+  become: True
+  package:
+    name:
+      - kubectl
+      - grep
+    state: present
+
+- name: Configure zsh plugins
+  become: True
+  template:
+    src: zshrc.j2
+    dest: "{{ kubectl_homedir }}/.zshrc.d/50-kubectl"
+    owner: "{{ kubectl_user }}"
+    group: "{{ kubectl_user }}"

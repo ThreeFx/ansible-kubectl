@@ -9,7 +9,7 @@ dependencies:
 
 galaxy_info:
   author: Ben Fiedler
-  description: Installes and configures kubectl
+  description: Installes and configures kubectl with zsh
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value

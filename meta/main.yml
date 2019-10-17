@@ -1,10 +1,6 @@
 ---
 dependencies:
   - role: update-packages
-  - role: homedir
-    vars:
-      homedir_user: "{{ kubectl_user }}"
-      homedir_result: "kubectl_homedir"
   - role: zsh
     vars:
       zsh_user: "{{ kubectl_user }}"

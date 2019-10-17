@@ -2,18 +2,18 @@
 name: molecule test
 on: [push]
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
         uses: actions/checkout@v1
         with:
-          path: zsh
+          path: kubectl
       - name: Check out dependencies
-        run:
-          - git clone https://github.com/ThreeFx/ansible-homedir ../homedir
-          - git clone https://github.com/ThreeFx/ansible-homedir ../zsh
-          - git clone https://github.com/ThreeFx/ansible-homedir ../update-packages
+        run: >
+          git clone https://github.com/ThreeFx/ansible-homedir ../homedir &&
+          git clone https://github.com/ThreeFx/ansible-zsh ../zsh &&
+          git clone https://github.com/ThreeFx/ansible-update-packages ../update-packages
       - name: Install python-virtualenv
         run: sudo apt-get update && sudo apt-get install python-virtualenv
       - name: Set up virtualenv

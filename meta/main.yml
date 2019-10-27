@@ -1,6 +1,5 @@
 ---
 dependencies:
-  - role: update-packages
   - role: zsh
     vars:
       zsh_user: "{{ kubectl_user }}"

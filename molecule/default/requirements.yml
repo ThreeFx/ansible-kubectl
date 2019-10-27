@@ -3,3 +3,8 @@
   scm: git
   version: master
   name: zsh
+
+- src: https://github.com/ThreeFx/ansible-update-packages
+  scm: git
+  version: master
+  name: update-packages
